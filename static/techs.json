@@ -1,0 +1,26 @@
+[
+    {
+        "icon": ["fab", "vuejs"],
+        "title": "Nuxt 3",
+        "subtitle": "framework",
+        "link": "https://nuxt.com/"
+    },
+    {
+        "icon": ["fab", "css3-alt"],
+        "title": "Tailwind CSS 3",
+        "subtitle": "styling",
+        "link": "https://tailwindcss.com"
+    },
+    {
+        "icon": ["fas", "font-awesome"],
+        "title": "Font Awesome 3",
+        "subtitle": "icons",
+        "link": "https://fontawesome.com/"
+    },
+    {
+        "icon": ["fas", "server"],
+        "title": "Heroku",
+        "subtitle": "deployed on",
+        "link": "https://heroku.com/"
+    }
+]
