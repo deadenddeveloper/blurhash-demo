@@ -19,8 +19,8 @@
     },
     {
         "icon": ["fas", "server"],
-        "title": "Heroku",
+        "title": "Firebase",
         "subtitle": "deployed on",
-        "link": "https://heroku.com/"
+        "link": "https://firebase.google.com/"
     }
 ]
