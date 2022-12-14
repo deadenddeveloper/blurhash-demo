@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindForms from '@tailwindcss/forms'
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -15,4 +16,11 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
   ],
+
+  tailwindcss: {
+    // @ts-ignore
+    config: {
+      plugins: [tailwindForms],
+    },
+  }
 })
