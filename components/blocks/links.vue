@@ -1,13 +1,13 @@
 <template>
   <ui-text>
-    <client-only>
-      <div v-for="link in links" :key="link.link">
-        <a :href="link.link" target="_blank" class="space-x-2">
+    <div v-for="link in links" :key="link.link">
+      <a :href="link.link" target="_blank" class="space-x-2">
+        <client-only>
           <fa-icon :icon="link.icon" />
-          <span>{{ link.title }}</span>
-        </a>
-      </div>
-    </client-only>
+        </client-only>
+        <span>{{ link.title }}</span>
+      </a>
+    </div>
   </ui-text>
 </template>
 

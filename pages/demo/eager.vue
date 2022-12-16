@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col space-y-8 items-center justify-center">
-    <ui-heading>Greedy loading</ui-heading>
+    <ui-heading>Eager loading</ui-heading>
 
     <ui-text>
       <p>This is the oldest way to download images and at the same time the worst. When the browser parses the HTML markup and comes across <ui-code>img</ui-code> tags, it will immediately load images. Of course, the more there are, the more requests the browser creates, the more traffic will pass from the server.</p>

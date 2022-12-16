@@ -1,0 +1,84 @@
+[
+    {
+        "title": "Eager loading",
+        "descr": "The good old way of not using lazy loading at all.",
+        "pros": [
+            "You don't have to do anything at all"
+        ],
+        "contras": [
+            "Lots of unnecessary requests",
+            "Unreasonable waste of traffic",
+            "The markup may 'jump' during loading"
+        ],
+        "before": "Nothing",
+        "link": "/demo/eager"
+    },
+    {
+        "title": "Browser lazy loading",
+        "descr": "That's something. The browser itself will determine when to load the image, you just need to add the attribute loading=\"lazy\" to the tag.",
+        "pros": [
+            "The easiest way with minimal effort"
+        ],
+        "contras": [
+            "It is obligatory to specify the width and height",
+            "Every engine works differently",
+            "Still not full support everywhere",
+            "The markup may 'jump' during loading"
+        ],
+        "before": "Nothing",
+        "link": "/demo/lazy-browser"
+    },
+    {
+        "title": "Load by intersection",
+        "descr": "Loading images using the Intersection Observer",
+        "pros": [
+            "You are exactly in control of the process"
+        ],
+        "contras": [
+            "Void in place of the image until it loads",
+            "The markup may 'jump' during loading"
+        ],
+        "before": "Nothing",
+        "link": "/demo/intersection"
+    },
+    {
+        "title": "Intersection plus placeholder image",
+        "descr": "Insert a stub picture in place of the image before it is loaded",
+        "pros": [
+            "The picture is not a blank space"
+        ],
+        "contras": [
+            "The placeholder itself must be loaded",
+            "While it's loading, everything seems the same",
+            "You have to match either the picture or the styles so that nothing crawls or sticks out"
+        ],
+        "before": "<img src=\"/img/placeholder.jpg\" />",
+        "link": "/demo/placeholder"
+    },
+    {
+        "title": "Intersection plus colored box",
+        "descr": "Insert a colored rectangle in place of the image before it is loaded",
+        "pros": [
+            "The picture is not a blank space",
+            "Colored rectangles are not as striking as identical pictures"
+        ],
+        "contras": [
+            "Still not the best UX",
+            "A lot of unnecessary manipulation to calculate dimensions"
+        ],
+        "before": "<div style=\"background-color:#636f65;aspect-ratio:500/281\" />",
+        "link": "/demo/color"
+    },
+    {
+        "title": "Intersection plus Blurhash",
+        "descr": "Very similar to the source blurred picture in place of the image before it has loaded",
+        "pros": [
+            "Pretty cool UX"
+        ],
+        "contras": [
+            "Calculations on large images can take time"
+        ],
+        "before": "<img src=\"/img/sample_bh.png\" />",
+        "link": "/demo/blurhash"
+    }
+]
