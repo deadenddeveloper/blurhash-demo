@@ -15,13 +15,18 @@ const props = defineProps<{
   image: TImage,
 }>()
 
-const loaded = ref(false)
+const inited = ref(false)
 const actualSrc = ref(props.src || '')
 
 const loadImage = ([{ isIntersecting }]: [{ isIntersecting: boolean }]) => {
-  if (isIntersecting && !loaded.value) {
-    loaded.value = true
-    actualSrc.value = `/img/demo/${props.image.name}?${new Date().getTime()}`
+  if (isIntersecting && !inited.value) {
+    inited.value = true
+    const img = new Image()
+    const src = `/img/demo/${props.image.name}?${new Date().getTime()}`
+    img.src = src
+    img.onload = () => {
+      actualSrc.value = src
+    }
   }
 }
 </script>
